@@ -165,59 +165,70 @@ body {
         background: chocolate;
         width: 20%;
         padding: 0 0 0 20px;
+        /* z-index: 15; */
     }
 
     #burger:checked + label:before {
         width: 30px;
         height: 30px;
         content: url(img/close.svg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-radius: 50%;
         box-shadow: inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    #burger:checked ~ .menu {
-        transition: all 2.5s ease-out;
+    #burger ~ .menu {
         position: absolute;
         display: flex;
+        align-items: baseline;
         flex-direction: column;
         width: 100%;
+    }
+
+    #burger:checked ~ .menu {
         top: 100px;
-        transform: scale(0.4, 0.4);
+        height: 240px;
     }
 
     #burger:not(:checked) ~ .menu {
-        transition: all 2.5s ease-out;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        top: 100px;
-        transform: scale(0.4, 0.4);
+        top: 24px;
+        height: 40px;
+        padding: 0 0 0 20px;
     }
 
-    #burger:not(:checked) ~ .menu > li:nth-child(n + 4) {}
+    #burger::checked ~ .menu > li:nth-child(n + 4) {}
 
-    #burger:not(:checked) ~ .menu > li:not(:last-child) > a,
-    #burger:not(:checked) ~ .menu > li:not(:last-child) {
-        text-align: left;
-        width: 100%;
-    }
-
-    #burger:checked ~ .menu > li:not(:last-child) > a,
-    #burger:checked ~ .menu > li:not(:last-child) {
+    #burger ~ .menu > li:not(:last-child) > a,
+    #burger ~ .menu > li:not(:last-child) {
         text-align: left;
         height: 60px;
         width: 100%;
     }
 
-    .menu > li:not(:last-child) > a.selected {
+    #burger:not(:checked) ~ .menu > li {
+        padding: 5px 0;
+        height: 5px;
+        width: 30px;
+        background-color: wheat;
+    }
+
+    #burger:not(:checked) ~ .menu > li:not(:last-child) > a {
+        background-color: chocolate;
+        padding: 5px 0;
+        height: 5px;
+        width: 30px;
+        font-size: 5px;
+        color: transparent;
+    }
+
+    #burger:not(:checked) ~ .menu > li:nth-child(n + 4) {
+        display: none;
+    }
+
+    #burger ~ .menu > li:not(:last-child) > a.selected {
         border: 0;
     }
 
-    .menu > .en {
+    #burger ~ .menu > .en {
         display: none;
     }
 
