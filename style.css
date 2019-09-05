@@ -205,6 +205,7 @@ body {
 
     #burger:checked ~ .menu {
         transform: translateY(300px);
+        box-shadow: 0 0 800px 800px rgba(0, 0, 0, 0.8);
     }
 
     #burger:not(:checked) ~ .menu {
@@ -222,7 +223,6 @@ body {
     .menu > li:not(:last-child) > a.selected {
         border: 0;
         border-left: 10px solid wheat;
-
     }
 
     .menu > .en {
