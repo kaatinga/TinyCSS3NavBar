@@ -176,57 +176,32 @@ body {
         justify-content: center;
     }
 
-    #burger:checked ~ .menu,
-    #burger:not(:checked) ~ .menu {
-        transition: all 0.2s ease-out;
+    #burger:checked ~ .menu {
+        transition: all 2.5s ease-out;
         position: absolute;
         display: flex;
-        align-content: center;
-        justify-content: center;
         flex-direction: column;
+        width: 100%;
+        top: 100px;
+        transform: scale(0.4, 0.4);
     }
 
     #burger:not(:checked) ~ .menu {
-        font-size: 4px;
-        padding: 0 0 0 20px;
+        transition: all 2.5s ease-out;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        margin: 0;
-        height: 100px;
-        align-items: baseline;
+        top: 100px;
+        transform: scale(0.4, 0.4);
     }
 
-    #burger:checked ~ .menu {
-        width: 100%;
-        background: chocolate;
-        height: 240px;
-        padding: 0;
-        margin: 340px 0 0 0;
-        width: 100%;
-    }
+    #burger:not(:checked) ~ .menu > li:nth-child(n + 4) {}
 
-    #burger:not(:checked) ~ .menu > li > a {
+    #burger:not(:checked) ~ .menu > li:not(:last-child) > a,
+    #burger:not(:checked) ~ .menu > li:not(:last-child) {
         text-align: left;
-        border: 0;
-        height: 5px;
-        padding: 0;
-        margin: 0;
-        width: 30px;
-        background-color: wheat;
-        transition: all 0.2s ease-out;
-    }
-
-    #burger:not(:checked) ~ .menu > li:nth-child(n + 4) {
-        display: none;
-    }
-
-    #burger:not(:checked) ~ .menu > li {
-        text-align: left;
-        border: 0;
-        height: 5px;
-        padding: 5px 0;
-        margin: 0;
-        background-color: transparent;
-        transition: all 0.2s ease-out;
+        width: 100%;
     }
 
     #burger:checked ~ .menu > li:not(:last-child) > a,
