@@ -5,3 +5,5 @@ A project of a simple pure CSS3 resposive layout with navbar that does not load 
 Roadmap:
 
 version 1.1 - Move .content down on opening menu in mobile layout
+
+![The menu showcase](https://raw.githubusercontent.com/kaatinga/TinyCSS3NavBar/master/readme/example.gif)
