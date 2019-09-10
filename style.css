@@ -5,7 +5,12 @@
     --containerwidth: 1000px;
     --footerheight: 80px;
     --navbarheight: 100px;
-    --contentheight: var(--height) - var(--footerheight) - var(--navbarheight);
+
+    /* navbar background color */
+    --navbarcolor: chocolate;
+
+    /* navbar font and button color */
+    --navbaritemcolor: wheat;
 }
 
 /* Main settings */
@@ -27,7 +32,6 @@ body {
     justify-content: space-between;
     max-width: var(--containerwidth);
     margin: 0 auto;
-
 }
 
 .flexcenter {
@@ -39,7 +43,7 @@ body {
     justify-content: space-between;
     width: 100%;
     min-height: var(--navbarheight);
-    background: chocolate;
+    background: var(--navbarcolor);
 }
 
 .logo {
@@ -66,7 +70,7 @@ body {
 .menu {
     justify-content: flex-end;
     list-style-type: none;
-    background: chocolate;
+    background: var(--navbarcolor);
     padding: 0 20px 0 0;
     white-space: nowrap;
     font-family: 'Roboto Condensed', sans-serif;
@@ -74,32 +78,32 @@ body {
 
 .menu > li:not(:last-child) > a {
     padding: 0 20px;
-    color: wheat;
+    color: var(--navbaritemcolor);
     height: var(--navbarheight);
     display: flex;
     align-items: center;
 }
 
 .menu > li:not(:last-child) > a.selected {
-    border-bottom: 10px solid wheat;
-    border-top: 10px solid chocolate;
+    border-bottom: 10px solid var(--navbaritemcolor);
+    border-top: 10px solid var(--navbarcolor);
 }
 
 .menu > li:not(:last-child) > a:hover {
-    background-color: wheat;
-    color: chocolate;
+    background-color: var(--navbaritemcolor);
+    color: var(--navbarcolor);
     transition: all 0.3s ease-out;
 }
 
 .menu > li:not(.en) > a.selected:hover {
     background-color: inherit;
-    color: wheat;
+    color: var(--navbaritemcolor);
 }
 
 .menu > .en > a {
     display: flex;
     justify-content: center;
-    border: 2px solid wheat;
+    border: 2px solid var(--navbaritemcolor);
     border-radius: 50%;
     width: 33px;
     height: 33px;
@@ -122,8 +126,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background: wheat;
-    min-height: calc(var(--contentheight));
+    background: var(--navbaritemcolor);
+    min-height: calc(var(--height) - var(--footerheight) - var(--navbarheight));
     padding: 20px;
 }
 
@@ -179,10 +183,10 @@ body {
     #burger + label {
         position: absolute;
         font-size: 30px;
-        background: chocolate;
+        background: var(--navbarcolor);
         width: 20%;
         padding: 0 0 0 20px;
-        /* z-index: 15; */
+        /* deleted 'z-index: 15;' as it must not lay higher than the elements inside the <label> */
     }
 
     #burger + label > img,
@@ -195,7 +199,7 @@ body {
         justify-content: center;
         border-radius: 50%;
         box-shadow: inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 10px rgba(0, 0, 0, 0.1);
-        color: wheat;
+        color: var(--navbaritemcolor);
         transition: 0.6s;
         z-index: 2;
     }
