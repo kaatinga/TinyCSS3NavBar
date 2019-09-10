@@ -75,7 +75,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.menu > li:not(:last-child) > a {
+.menu > li > a {
     padding: 0 20px;
     color: var(--navbaritemcolor);
     height: var(--navbarheight);
@@ -83,23 +83,23 @@ body {
     align-items: center;
 }
 
-.menu > li:not(:last-child) > a.selected {
+.menu > li > a.selected {
     border-bottom: 10px solid var(--navbaritemcolor);
     border-top: 10px solid var(--navbarcolor);
 }
 
-.menu > li:not(:last-child) > a:hover {
+.menu > li > a:hover {
     background-color: var(--navbaritemcolor);
     color: var(--navbarcolor);
     transition: all 0.3s ease-out;
 }
 
-.menu > li:not(.en) > a.selected:hover {
+.menu > li > a.selected:hover {
     background-color: inherit;
     color: var(--navbaritemcolor);
 }
 
-.menu > .en > a {
+.en > a {
     display: flex;
     justify-content: center;
     border: 2px solid var(--navbaritemcolor);
@@ -114,7 +114,7 @@ body {
     transition: opacity 0.3s ease-out;
 }
 
-.menu > .en > a:hover {
+.en > a:hover {
     opacity: 1;
 }
 
@@ -149,6 +149,12 @@ body {
 
     .logo {
         justify-content: flex-end;
+    }
+
+    /* Hiding the language switcher */
+
+    .en {
+        display: none;
     }
 
     /* Showing the burger */
@@ -231,35 +237,26 @@ body {
         padding: 0 0 0 24px;
     }
 
-    #burger::checked ~ .menu > li:nth-child(n + 4) {}
-
     #burger ~ .menu > li > a,
     #burger ~ .menu > li {
         text-align: left;
         height: 60px;
         width: 100%;
         transition: 0.6s;
-        border: 0; /* to remove stylizing the selected menu item */
+        border: 0;
+        /* to remove stylizing the selected menu item */
     }
 
+    #burger:not(:checked) ~ .menu > li > a,
     #burger:not(:checked) ~ .menu > li {
         padding: 5px 0;
         height: 5px;
         width: 30px;
-        background-color: transparent;
+        background: transparent;
     }
 
     #burger:not(:checked) ~ .menu > li > a {
-        background-color: transparent;
-        padding: 5px 0;
-        height: 5px;
-        width: 30px;
         font-size: 5px;
         color: transparent;
     }
-
-    .menu > .en {
-        display: none;
-    }
-
 }
