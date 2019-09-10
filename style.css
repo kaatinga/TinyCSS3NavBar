@@ -44,6 +44,7 @@ body {
     width: 100%;
     min-height: var(--navbarheight);
     background: var(--navbarcolor);
+    padding: 0 20px;
 }
 
 .logo {
@@ -55,7 +56,6 @@ body {
 
 .logo img {
     width: 200px;
-    padding: 0 0 0 20px;
 }
 
 /* hiding the burger in desktop layout */
@@ -71,7 +71,6 @@ body {
     justify-content: flex-end;
     list-style-type: none;
     background: var(--navbarcolor);
-    padding: 0 20px 0 0;
     white-space: nowrap;
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -152,12 +151,6 @@ body {
         justify-content: flex-end;
     }
 
-    /* Changing padding settings so as not to let the logo stick the right edge */
-
-    .logo img {
-        padding: 0 20px 0 0;
-    }
-
     /* Showing the burger */
 
     #burger,
@@ -165,7 +158,6 @@ body {
         display: flex;
         align-items: center;
         height: var(--navbarheight);
-        padding: 0 0 0 20px;
     }
 
     /* Stylizing the burger */
@@ -218,10 +210,11 @@ body {
     .menu {
         position: absolute;
         align-items: baseline;
+        justify-content: flex-start;
         flex-direction: column;
         width: 100%;
         transition: 0.6s;
-        padding: 0;
+        left: 0;
     }
 
     /* Stylizing the menu */
@@ -235,7 +228,7 @@ body {
     #burger:not(:checked) ~ .menu {
         top: 24px;
         height: 70px;
-        padding: 0 0 0 20px;
+        padding: 0 0 0 24px;
     }
 
     #burger::checked ~ .menu > li:nth-child(n + 4) {}
