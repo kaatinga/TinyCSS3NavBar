@@ -237,8 +237,6 @@ body {
         padding: 0 0 0 24px;
     }
 
-    #burger::checked ~ .menu > li:nth-child(n + 4) {}
-
     #burger ~ .menu > li > a,
     #burger ~ .menu > li {
         text-align: left;
@@ -249,18 +247,15 @@ body {
         /* to remove stylizing the selected menu item */
     }
 
+    #burger:not(:checked) ~ .menu > li > a,
     #burger:not(:checked) ~ .menu > li {
         padding: 5px 0;
         height: 5px;
         width: 30px;
-        background-color: transparent;
+        background: transparent;
     }
 
     #burger:not(:checked) ~ .menu > li > a {
-        background-color: transparent;
-        padding: 5px 0;
-        height: 5px;
-        width: 30px;
         font-size: 5px;
         color: transparent;
     }
