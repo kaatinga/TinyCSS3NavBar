@@ -165,6 +165,7 @@ body {
         display: flex;
         align-items: center;
         height: var(--navbarheight);
+        padding: 0 0 0 20px;
     }
 
     /* Stylizing the burger */
@@ -172,10 +173,9 @@ body {
     #burger {
         position: relative;
         opacity: 0;
-        width: 30px;
+        width: 20%;
         z-index: 25;
         cursor: pointer;
-        margin: 0 0 0 20px;
     }
 
     #burger + label {
@@ -183,7 +183,6 @@ body {
         font-size: 30px;
         background: var(--navbarcolor);
         width: 20%;
-        padding: 0 0 0 20px;
         /* deleted 'z-index: 15;' as it must not lay higher than the elements inside the <label> */
     }
 
