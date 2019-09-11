@@ -1,7 +1,6 @@
 /* Setting variables in order to calculate sizes below */
 
 :root {
-    --height: 100vh;
     --containerwidth: 1000px;
     --footerheight: 80px;
     --navbarheight: 100px;
@@ -84,20 +83,15 @@ body {
     align-items: center;
 }
 
-.menu > li > a.selected {
-    border-bottom: 10px solid var(--navbaritemcolor);
-    border-top: 10px solid var(--navbarcolor);
-}
-
-.menu > li > a:hover {
-    background-color: var(--navbaritemcolor);
+.menu > li > a:hover:not(.selected) {
+    background: var(--navbaritemcolor);
     color: var(--navbarcolor);
     transition: all 0.3s ease-out;
 }
 
-.menu > li > a.selected:hover {
-    background-color: inherit;
-    color: var(--navbaritemcolor);
+.menu > li > a.selected {
+    border-bottom: 10px solid var(--navbaritemcolor);
+    border-top: 10px solid var(--navbarcolor);
 }
 
 .en > a {
@@ -127,7 +121,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     background: var(--navbaritemcolor);
-    min-height: calc(var(--height) - var(--footerheight) - var(--navbarheight));
+    min-height: calc(100vh - var(--footerheight) - var(--navbarheight));
     padding: 20px;
 }
 
@@ -227,7 +221,7 @@ body {
     }
 
     #burger:checked ~ .menu {
-        top: 100px;
+        top: var(--navbarheight);
         height: calc(var(--mobilemenuitemheight)*4);
         box-shadow: 0 240px 90px 120px rgba(0, 0, 0, 0.8);
     }
@@ -253,9 +247,16 @@ body {
     #burger:not(:checked) ~ .menu > li {
         padding: 5px 0;
         height: 5px;
-        width: 30px;
+        width: 22px;
         background: transparent;
         font-size: 5px;
         color: transparent;
+    }
+
+    /* Stylizing the selected menu item */
+
+    .menu > li > a.selected {
+        background: var(--navbaritemcolor);
+        color: var(--navbarcolor);
     }
 }
