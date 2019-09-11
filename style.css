@@ -108,7 +108,7 @@ body {
     width: 33px;
     height: 33px;
     margin: 0 0 0 20px;
-    background-image: url(img/ukm.svg);
+    background: url(img/ukm.svg) no-repeat;
     background-position: center;
     background-size: 59px 40px;
     opacity: .5;
