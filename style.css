@@ -7,10 +7,10 @@
     --mobilemenuitemheight: 60px;
     --speed: 0.3s;
 
-    /* navbar background color */
+    /* Navbar background color */
     --navbarcolor: chocolate;
 
-    /* navbar font and button color */
+    /* Navbar font and button color */
     --navbaritemcolor: wheat;
 }
 
@@ -58,7 +58,7 @@ body {
     width: 200px;
 }
 
-/* stylizing the menu */
+/* Stylizing the menu */
 
 .menu {
     display: flex;
@@ -88,7 +88,7 @@ body {
     color: var(--navbarcolor);
 }
 
-/* stylyzing the content block */
+/* Stylyzing the content block */
 
 .content {
     display: flex;
@@ -100,7 +100,7 @@ body {
     padding: 20px;
 }
 
-/* stylyzing the footer block */
+/* Stylyzing the footer block */
 
 .footer {
     height: var(--footerheight);
@@ -113,9 +113,9 @@ body {
 
 /* Settings only for the desktop layout */
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
-    /* stylizing the menu */
+    /* Stylizing the menu */
 
     .menu {
         justify-content: flex-end;
@@ -156,7 +156,7 @@ body {
 
 /* Settings only for the mobile layout */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     /* Moving the logo to the right side */
 
