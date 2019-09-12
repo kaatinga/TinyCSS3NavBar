@@ -249,6 +249,9 @@ body {
         height: 5px;
         width: 22px;
         background: transparent;
+    }
+
+    #burger:not(:checked) ~ .menu > li > a {
         font-size: 5px;
         color: transparent;
     }
