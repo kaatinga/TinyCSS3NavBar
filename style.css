@@ -58,13 +58,6 @@ body {
     width: 200px;
 }
 
-/* hiding the burger in desktop layout */
-
-#burger,
-#burger + label {
-    display: none;
-}
-
 /* stylizing the menu in desktop layout */
 
 .menu {
@@ -87,25 +80,6 @@ body {
     background: var(--navbaritemcolor);
     color: var(--navbarcolor);
     transition: all var(--speed) ease-out;
-}
-
-.en > a {
-    display: flex;
-    justify-content: center;
-    border: 2px solid var(--navbaritemcolor);
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    margin: 0 0 0 20px;
-    background: url(img/ukm.svg) no-repeat;
-    background-position: center;
-    background-size: 59px 40px;
-    opacity: .5;
-    transition: opacity var(--speed) ease-out;
-}
-
-.en > a:hover {
-    opacity: 1;
 }
 
 /* stylyzing the content block */
@@ -135,9 +109,39 @@ body {
 
 @media (min-width: 768px) {
 
+    /* Stylizing the selected menu item */
+
     .menu > li > a.selected {
         border-bottom: 10px solid var(--navbaritemcolor);
         border-top: 10px solid var(--navbarcolor);
+    }
+
+    /* Hiding the burger */
+
+    #burger,
+    #burger + label {
+        display: none;
+    }
+
+    /* Stylizing the language switcher */
+
+    .en > a {
+        display: flex;
+        justify-content: center;
+        border: 2px solid var(--navbaritemcolor);
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        margin: 0 0 0 20px;
+        background: url(img/ukm.svg) no-repeat;
+        background-position: center;
+        background-size: 59px 40px;
+        opacity: .5;
+        transition: opacity var(--speed) ease-out;
+    }
+
+    .en > a:hover {
+        opacity: 1;
     }
 
 }
