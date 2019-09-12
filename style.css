@@ -58,10 +58,9 @@ body {
     width: 200px;
 }
 
-/* stylizing the menu in desktop layout */
+/* stylizing the menu */
 
 .menu {
-    justify-content: flex-end;
     list-style-type: none;
     background: var(--navbarcolor);
     white-space: nowrap;
@@ -71,7 +70,6 @@ body {
 .menu > li > a {
     padding: 0 20px;
     color: var(--navbaritemcolor);
-    height: var(--navbarheight);
     display: flex;
     align-items: center;
 }
@@ -108,6 +106,17 @@ body {
 /* Settings only for desktop layout */
 
 @media (min-width: 768px) {
+
+    /* stylizing the menu */
+
+    .menu {
+        justify-content: flex-end;
+    }
+
+    .menu > li > a {
+        height: var(--navbarheight);
+    }
+
 
     /* Stylizing the selected menu item */
 
@@ -242,8 +251,8 @@ body {
         padding: 0 0 0 24px;
     }
 
-    #burger ~ .menu > li > a,
-    #burger ~ .menu > li {
+    .menu > li > a,
+    .menu > li {
         text-align: left;
         height: var(--mobilemenuitemheight);
         width: 100%;
