@@ -14,7 +14,7 @@
     --navbaritemcolor: wheat;
 }
 
-/* Main settings */
+/* Mutual settings for the both layouts (the mobile and desktop ones) */
 
 * {
     box-sizing: border-box;
@@ -49,7 +49,6 @@ body {
 }
 
 .logo {
-    justify-content: flex-start;
     height: var(--navbarheight);
     width: 80%;
     z-index: 25;
