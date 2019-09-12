@@ -48,6 +48,7 @@ main {
     flex-direction: column;
     background: var(--navbaritemcolor);
     padding: 20px;
+    flex: 1;
 }
 
 footer {
@@ -55,7 +56,6 @@ footer {
     color: white;
     background: black;
     padding: 20px;
-    margin-top: auto;
 }
 
 .logo {
