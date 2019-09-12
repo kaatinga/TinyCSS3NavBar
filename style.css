@@ -81,6 +81,13 @@ body {
     transition: all var(--speed) ease-out;
 }
 
+/* Stylizing the selected menu item */
+
+.menu > li > a.selected {
+    background: var(--navbaritemcolor);
+    color: var(--navbarcolor);
+}
+
 /* stylyzing the content block */
 
 .content {
@@ -104,7 +111,7 @@ body {
     padding: 20px;
 }
 
-/* Settings only for desktop layout */
+/* Settings only for the desktop layout */
 
 @media (min-width: 768px) {
 
@@ -116,13 +123,6 @@ body {
 
     .menu > li > a {
         height: var(--navbarheight);
-    }
-
-    /* Stylizing the selected menu item */
-
-    .menu > li > a.selected {
-        border-bottom: 10px solid var(--navbaritemcolor);
-        border-top: 10px solid var(--navbarcolor);
     }
 
     /* Hiding the burger */
@@ -152,10 +152,9 @@ body {
     .en > a:hover {
         opacity: 1;
     }
-
 }
 
-/* Settings only for mobile layout */
+/* Settings only for the mobile layout */
 
 @media (max-width: 768px) {
 
@@ -193,9 +192,7 @@ body {
     #burger + label {
         position: absolute;
         font-size: 30px;
-        background: var(--navbarcolor);
         width: 20%;
-        /* deleted 'z-index: 15;' as it must not lay higher than the elements inside the <label> */
     }
 
     #burger + label > img,
@@ -268,12 +265,5 @@ body {
 
     #burger:not(:checked) ~ .menu > li > a {
         font-size: 5px;
-    }
-
-    /* Stylizing the selected menu item */
-
-    .menu > li > a.selected {
-        background: var(--navbaritemcolor);
-        color: var(--navbarcolor);
     }
 }
