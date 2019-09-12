@@ -22,34 +22,46 @@
     padding: 0;
 }
 
-html,
 body {
-    height: 100%;
-}
-
-.container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    max-width: var(--containerwidth);
-    margin: 0 auto;
-}
-
-.flexcenter {
-    display: flex;
     align-items: center;
+    min-height: 100vh;
 }
 
-.navbar {
-    justify-content: space-between;
+main,
+footer,
+header {
+    display: flex;
     width: 100%;
+    max-width: var(--containerwidth);
+}
+
+header {
+    align-items: center;
+    justify-content: space-between;
     min-height: var(--navbarheight);
     background: var(--navbarcolor);
 }
 
+main {
+    flex-direction: column;
+    background: var(--navbaritemcolor);
+    padding: 20px;
+}
+
+footer {
+    min-height: var(--footerheight);
+    color: white;
+    background: black;
+    padding: 20px;
+    margin-top: auto;
+}
+
 .logo {
+    display: flex;
+    align-items: center;
     height: var(--navbarheight);
-    width: 80%;
     z-index: 15;
 }
 
@@ -91,22 +103,11 @@ body {
     padding: 20px;
 }
 
-/* Stylyzing the footer block */
-
-.footer {
-    height: var(--footerheight);
-    font-size: 16px;
-    max-width: 100%;
-    color: white;
-    background: black;
-    padding: 20px;
-}
-
 /* Settings only for the desktop layout */
 
 @media screen and (min-width: 768px) {
 
-    .navbar {
+    header {
         padding: 0 20px;
     }
 
