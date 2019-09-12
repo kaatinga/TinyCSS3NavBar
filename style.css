@@ -99,8 +99,8 @@ body {
     justify-content: center;
     border: 2px solid var(--navbaritemcolor);
     border-radius: 50%;
-    width: 33px;
-    height: 33px;
+    width: 32px;
+    height: 32px;
     margin: 0 0 0 20px;
     background: url(img/ukm.svg) no-repeat;
     background-position: center;
