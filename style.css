@@ -253,7 +253,6 @@ body {
 
     .menu > li > a,
     .menu > li {
-        text-align: left;
         height: var(--mobilemenuitemheight);
         width: 100%;
         transition: var(--speed);
@@ -264,12 +263,11 @@ body {
         padding: 5px 0;
         height: 5px;
         width: 22px;
-        background: transparent;
+        opacity: 0;
     }
 
     #burger:not(:checked) ~ .menu > li > a {
         font-size: 5px;
-        color: transparent;
     }
 
     /* Stylizing the selected menu item */
