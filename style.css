@@ -61,6 +61,7 @@ body {
 /* stylizing the menu */
 
 .menu {
+    display: flex;
     list-style-type: none;
     background: var(--navbarcolor);
     white-space: nowrap;
@@ -116,7 +117,6 @@ body {
     .menu > li > a {
         height: var(--navbarheight);
     }
-
 
     /* Stylizing the selected menu item */
 
