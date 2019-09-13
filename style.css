@@ -6,6 +6,7 @@
     --navbarheight: 100px;
     --mobilemenuitemheight: 60px;
     --speed: .3s;
+    --space: 20px;
 
     /* Navbar background color */
     --navbarcolor: chocolate;
@@ -45,7 +46,7 @@ header {
 main {
     flex-direction: column;
     background: var(--navbaritemcolor);
-    padding: 20px;
+    padding: var(--space);
     flex: 1;
 }
 
@@ -53,7 +54,7 @@ footer {
     min-height: var(--footerheight);
     color: white;
     background: black;
-    padding: 20px;
+    padding: var(--space);
 }
 
 .logo {
@@ -80,7 +81,7 @@ footer {
 }
 
 .menu > li > a {
-    padding: 0 20px;
+    padding: 0 var(--space);
     color: var(--navbaritemcolor);
     display: flex;
     align-items: center;
@@ -97,7 +98,7 @@ footer {
 @media screen and (min-width: 769px) {
 
     header {
-        padding: 0 20px;
+        padding: 0 var(--space);
     }
 
     /* Stylizing the menu */
@@ -156,9 +157,8 @@ footer {
         justify-content: flex-end;
         position: absolute;
         align-items: baseline;
-        top: 30px;
-        right: 20px;
-        height: 40px;
+        top: calc((var(--navbarheight) - 40px) / 2);
+        right: var(--space);
     }
 
     /* Hiding the language switcher */
