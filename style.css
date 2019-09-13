@@ -201,7 +201,7 @@ footer {
         color: var(--navbaritemcolor);
         transition: var(--speed);
         z-index: 2;
-        left: 20px;
+        left: var(--space);
     }
 
     #burger:not(:checked) + label > img {
@@ -237,7 +237,7 @@ footer {
 
     #burger:not(:checked) ~ .menu {
         height: var(--navbarheight);
-        padding: 35px 0 0 25px;
+        padding: 35px 0 0 calc(var(--space) + 5px);
         opacity: 0;
     }
 
@@ -252,7 +252,7 @@ footer {
     #burger:not(:checked) ~ .menu > li {
         padding: 5px 0;
         height: 5px;
-        width: 22px;
+        width: calc(var(--space) + 2px);
     }
 
     #burger:not(:checked) ~ .menu > li > a {
