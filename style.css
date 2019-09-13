@@ -152,13 +152,12 @@ footer {
     /* Moving the logo to the right side */
 
     .logo {
+        position: absolute;
         width: 100%;
         justify-content: flex-end;
-        position: absolute;
-        align-items: baseline;
-        top: 30px;
+        align-items: center;
+        height: 100px;
         right: 20px;
-        height: 40px;
     }
 
     /* Hiding the language switcher */
