@@ -2,7 +2,7 @@
 
 A project of a simple pure CSS3 resposive layout with navbar that does not load browsers and, as result, works well everywere
 
-[![Latest release]](https://github.com/kaatinga/TinyCSS3NavBar/releases)
+[Latest release](https://github.com/kaatinga/TinyCSS3NavBar/releases)
 [![Build Status]](https://github.com/kaatinga/TinyCSS3NavBar)
 [![Last commit]](https://github.com/kaatinga/TinyCSS3NavBar/commits/master)
 [![License]](https://github.com/kaatinga/TinyCSS3NavBar/blob/master/LICENSE)
