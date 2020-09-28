@@ -4,7 +4,7 @@ A project of a simple pure CSS3 resposive layout with navbar that does not load 
 
 v1.3:
 
-![The menu showcase](https://raw.githubusercontent.com/kaatinga/TinyCSS3NavBar/master/readme/example.gif)
+![The menu showcase](readme/example.gif)
 
 Roadmap:
 
